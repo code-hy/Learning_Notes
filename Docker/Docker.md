@@ -1,8 +1,5 @@
 
 
-
-Of course! Here is the complete and detailed Docker tutorial in a single, copy-paste-able Markdown file named `Docker.md`.
-
 ***
 
 ### File: Docker.md
