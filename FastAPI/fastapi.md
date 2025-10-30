@@ -45,3 +45,6 @@ You'll need two main packages: `fastapi` for the framework itself and `uvicorn` 
 
 ```bash
 pip install "fastapi[all]"
+
+Note: Installing fastapi[all] includes uvicorn and other useful dependencies. For production, you might want to install fastapi and uvicorn separately: pip install fastapi "uvicorn[standard]".
+
