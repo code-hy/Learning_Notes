@@ -45,6 +45,7 @@ You'll need two main packages: `fastapi` for the framework itself and `uvicorn` 
 
 ```bash
 pip install "fastapi[all]"
+```
 
 ### 
 Note: Installing fastapi[all] includes uvicorn and other useful dependencies. For production, you might want to install fastapi and uvicorn separately: pip install fastapi "uvicorn[standard]".
@@ -52,7 +53,7 @@ Note: Installing fastapi[all] includes uvicorn and other useful dependencies. Fo
 ## Your First API: "Hello, World"
 Let's create a minimal API. Create a file named main.py:
 
-# This is a Python code block
+### This is a Python code block
 ```python
 # main.py
 
@@ -68,7 +69,7 @@ async def read_root():
     return {"Hello": "World"}
 ```
 
-## Explanation:
+#### Explanation:
 1.  from fastapi import FastAPI: Imports the main FastAPI class.
 2.  app = FastAPI(): Creates an instance of your application. This will be the central point of your API.
 3.  @app.get("/"): This is a "decorator". It tells FastAPI that the function right below it is in charge of handling requests that go to:
