@@ -49,3 +49,30 @@ pip install "fastapi[all]"
 ### 
 Note: Installing fastapi[all] includes uvicorn and other useful dependencies. For production, you might want to install fastapi and uvicorn separately: pip install fastapi "uvicorn[standard]".
 
+## Your First API: "Hello, World"
+Let's create a minimal API. Create a file named main.py:
+
+# This is a Python code block
+```python
+# main.py
+
+from fastapi import FastAPI
+
+# Create an instance of the FastAPI class
+app = FastAPI()
+
+# Define a path operation decorator
+@app.get("/")
+# Define the path operation function
+async def read_root():
+    return {"Hello": "World"}
+```
+
+## Explanation:
+1.  from fastapi import FastAPI: Imports the main FastAPI class.
+2.  app = FastAPI(): Creates an instance of your application. This will be the central point of your API.
+3.  @app.get("/"): This is a "decorator". It tells FastAPI that the function right below it is in charge of handling requests that go to:
+    The path /.
+    Using the HTTP GET operation.
+4.  async def read_root():: An async function. FastAPI can handle async functions natively, which is great for performance.
+5.  return {"Hello": "World"}: FastAPI will take this dictionary, convert it to JSON, and send it back to the client.
