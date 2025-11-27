@@ -80,4 +80,6 @@
       -   demo on docker wher eyou can use agents to control computer
       -   chat applications, and you can provide it some tools 
       
-  
+ # Summary
+
+ In the beginning, we enter request thru chat, and need to cut-and-paste into our IDE.  New IDE tools now include chat agents that can perform changes on your codebase, which avoids context switching between ChatGPT and the IDE.
