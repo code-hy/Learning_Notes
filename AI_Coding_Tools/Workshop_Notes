@@ -21,6 +21,9 @@
 
 # Coding Assistants  / Integerated Developmenty Environment or IDEs
 1.  Claude Code (anthropic) (doesn't feel like IDE)  feels more like command line
+     *  can read files, can write files
+     *  creates todo list and proceeds with it
+     *  can run commands 
      
 2.  Github Copilot 
 3.  Cursor (cursor.com)
