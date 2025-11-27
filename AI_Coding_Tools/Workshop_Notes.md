@@ -24,7 +24,8 @@
      *  can read files, can write files
      *  creates todo list and proceeds with it
      *  can run commands 
-     
+     <img width="1140" height="471" alt="image" src="https://github.com/user-attachments/assets/63e710d6-a1a8-4efa-a385-7d3158e6515f" />
+
 2.  Github Copilot 
 3.  Cursor (cursor.com)
 4.  Pear  (trypear.ai)
