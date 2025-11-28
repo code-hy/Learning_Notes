@@ -54,7 +54,7 @@
 
        -  dense layer.... input to dense layer, and output of dense layer, the reason is dense, each element of input is connected to each output.... it is pretty dense....  each output ahs w, put all w together it becomes one w....  multiply w by x...
        -  dense layer is a matrix multiplication, that's why it is dense, because it multiplies each x by the weight, different weights for different models... etc.
-      <img width="889" height="697" alt="image" src="https://github.com/user-attachments/assets/aba1d49c-dcf9-452c-9de0-55572f93888f" />
+           <img width="889" height="697" alt="image" src="https://github.com/user-attachments/assets/aba1d49c-dcf9-452c-9de0-55572f93888f" />
        -   we can put multiple dense layer together
        -   <img width="957" height="694" alt="image" src="https://github.com/user-attachments/assets/8b398950-2ec9-4703-80f2-07a210030974" />
 
