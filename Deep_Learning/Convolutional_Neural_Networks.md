@@ -66,6 +66,14 @@
 
     <img width="896" height="485" alt="image" src="https://github.com/user-attachments/assets/f95a0dc3-9cb3-44e3-bc81-9256da8c50a2" />
 
+
+Convolution Network is the Feature Extraction
+Dense Layer is the Classification
+
+
+<img width="1381" height="773" alt="image" src="https://github.com/user-attachments/assets/77b442fa-e071-481b-8ad8-b4dd366a475e" />
+
+
   
   ####   Other sites explaining  [simple explanation of cnn](https://www.youtube.com/watch?v=zfiSAzpy9NM)
 
