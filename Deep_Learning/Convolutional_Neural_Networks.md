@@ -12,19 +12,19 @@
       -  one filter equal to one feature-map  - higher vzalues is higher similarity
       -  so if we have 6 filters, we have 6 feature-maps (one feature map per filter
       -  input is image, while the output is a feature map
-      -  <img width="752" height="443" alt="image" src="https://github.com/user-attachments/assets/31f120d7-f75d-43eb-b247-36df2df2fa32" />
+       <img width="752" height="443" alt="image" src="https://github.com/user-attachments/assets/31f120d7-f75d-43eb-b247-36df2df2fa32" />
       -  Output of the first convolutional layer is a set of feature maps
       -  Feature maps are fed into next convolutional layer which has also its own set of filters
-      -  <img width="544" height="336" alt="image" src="https://github.com/user-attachments/assets/1b4d23de-4824-4509-b4ce-67f685bc850d" />
-      -  <img width="803" height="433" alt="image" src="https://github.com/user-attachments/assets/9eab0340-2701-440d-9b96-8d9743d20da2" />
+       <img width="544" height="336" alt="image" src="https://github.com/user-attachments/assets/1b4d23de-4824-4509-b4ce-67f685bc850d" />
+       <img width="803" height="433" alt="image" src="https://github.com/user-attachments/assets/9eab0340-2701-440d-9b96-8d9743d20da2" />
       -  each layer has it's own set of feature maps, because of chaining , it has more and more complex filters....
       -  ie. 3 convolutional layer,  first layer is simple shapes, second layer, could have angles, cross, circles,  combination of different filters, get more complex shapes....  first layer, recognise simple patterns, second layer will recognise more complex patterns, third layer can detect sleeves
-      -  <img width="946" height="353" alt="image" src="https://github.com/user-attachments/assets/22c273e0-0258-428d-a92b-dcda4e51a57a" />
+       <img width="946" height="353" alt="image" src="https://github.com/user-attachments/assets/22c273e0-0258-428d-a92b-dcda4e51a57a" />
       -  what filters do is it looks at the region across all the feature maps... it learns automatically.
-      -  <img width="1009" height="492" alt="image" src="https://github.com/user-attachments/assets/90a120c7-283e-4d24-973b-f5092a9da659" />
-      -  <img width="980" height="720" alt="image" src="https://github.com/user-attachments/assets/685fc6fc-a9cf-4583-8ae9-36bad3e4f2cb" />
+      <img width="1009" height="492" alt="image" src="https://github.com/user-attachments/assets/90a120c7-283e-4d24-973b-f5092a9da659" />
+      <img width="980" height="720" alt="image" src="https://github.com/user-attachments/assets/685fc6fc-a9cf-4583-8ae9-36bad3e4f2cb" />
       -  take the image and pass it through convolutional layers, and the output or result is a vector representation.  Input could be 299 x 299 x 3,   while the vector would be an array of size 2048.  some part of the vector represent sleeves, some the bottom, some the top, and so forth
-      -   <img width="621" height="439" alt="image" src="https://github.com/user-attachments/assets/52676d0c-8237-4b55-a5c8-47576ca306c7" />
+        <img width="621" height="439" alt="image" src="https://github.com/user-attachments/assets/52676d0c-8237-4b55-a5c8-47576ca306c7" />
 
       -  
 
