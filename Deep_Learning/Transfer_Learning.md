@@ -34,3 +34,6 @@ Batching by 32 images per training
 <img width="1074" height="706" alt="image" src="https://github.com/user-attachments/assets/1f2de6fd-e95c-4abb-b231-16f6c2270607" />
 
 
+<img width="1168" height="213" alt="image" src="https://github.com/user-attachments/assets/46e6b934-2e40-412d-a3c8-27c30ffd1445" />
+
+
