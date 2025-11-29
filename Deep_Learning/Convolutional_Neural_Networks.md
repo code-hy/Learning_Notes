@@ -4,7 +4,7 @@
 ##  How it works
 
 - Consists of Layers  ie  layer1, layer2, layer3, ... layern
-- Two types of Netrworks
+- Two types of Networks
     ### convolutional layers
       -  consists of filters (small shapes)
       -  slide filter across the images, everytime we apply filter to image, we see how similar the filter is to the image (from 0 to 9, 10 etc)  similarity
@@ -31,12 +31,28 @@
        <img width="946" height="353" alt="image" src="https://github.com/user-attachments/assets/22c273e0-0258-428d-a92b-dcda4e51a57a" />
 <img width="946" height="353" alt="Screenshot 2025-11-28 132614" src="https://github.com/user-attachments/assets/92329e08-fd3e-432f-82a9-da529fe10edc" />
 
+<img width="946" height="353" alt="Screenshot 2025-11-28 132614" src="https://github.com/user-attachments/assets/7176798f-de03-4e4d-9090-0fcafd346be4" />
+
   
       -  what filters do is it looks at the region across all the feature maps... it learns automatically.
       <img width="1009" height="492" alt="image" src="https://github.com/user-attachments/assets/90a120c7-283e-4d24-973b-f5092a9da659" />
+
+
+
+      <img width="1009" height="438" alt="Screenshot 2025-11-28 132735" src="https://github.com/user-attachments/assets/be4fceaf-2ebc-47fb-9236-0118312094a5" />
+
+<img width="1009" height="438" alt="Screenshot 2025-11-28 132735" src="https://github.com/user-attachments/assets/e5a4a43b-503b-4a4d-9a21-c213e7501a2e" />
+
+      
       <img width="980" height="720" alt="image" src="https://github.com/user-attachments/assets/685fc6fc-a9cf-4583-8ae9-36bad3e4f2cb" />
+<img width="980" height="720" alt="Screenshot 2025-11-28 132815" src="https://github.com/user-attachments/assets/cd62fced-ae6d-4148-853d-d9d99d3437db" />
+
+
+      
       -  take the image and pass it through convolutional layers, and the output or result is a vector representation.  Input could be 299 x 299 x 3,   while the vector would be an array of size 2048.  some part of the vector represent sleeves, some the bottom, some the top, and so forth
         <img width="621" height="439" alt="image" src="https://github.com/user-attachments/assets/52676d0c-8237-4b55-a5c8-47576ca306c7" />
+
+    
 
       -  
 
