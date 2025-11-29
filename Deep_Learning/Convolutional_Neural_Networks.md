@@ -52,7 +52,8 @@
       -  take the image and pass it through convolutional layers, and the output or result is a vector representation.  Input could be 299 x 299 x 3,   while the vector would be an array of size 2048.  some part of the vector represent sleeves, some the bottom, some the top, and so forth
         <img width="621" height="439" alt="image" src="https://github.com/user-attachments/assets/52676d0c-8237-4b55-a5c8-47576ca306c7" />
 
-    
+    <img width="621" height="439" alt="Screenshot 2025-11-28 133044" src="https://github.com/user-attachments/assets/6eba5ef6-f20e-46e5-92fa-49275415deb4" />
+
 
       -  
 
@@ -64,29 +65,56 @@
       -  after feeding the output of the convolutional layers, it will be fed into the dense layer, which will finally output the prediction. role of convolutional layers is to extract vector representation
          while the role of dense layers is to make predictions
          <img width="1060" height="550" alt="image" src="https://github.com/user-attachments/assets/a74e0b7e-53f9-4f99-89ae-b28ede0f60b6" />
+<img width="1060" height="550" alt="Screenshot 2025-11-28 133238" src="https://github.com/user-attachments/assets/8ac2756e-2db9-45f3-82a9-8035afd46f9d" />
+
+         
     #### components of dense layers
       -  original image is turned into vector ie.  2048
       -  build a model (binary classification)
       -  output is is it a t-shirt or not a t-shirt (0 or 1), use something like logistic regression, our function g is a sigmoid of our features and the weights, the weights are trained
          output is a probability that the object is a t-shirt
   <img width="1038" height="635" alt="image" src="https://github.com/user-attachments/assets/a85f0619-064e-4b49-b37b-8d01af1c0d10" />
+<img width="1038" height="635" alt="Screenshot 2025-11-28 133715" src="https://github.com/user-attachments/assets/8bc9ae4e-d21d-4a3e-a444-08138335fcce" />
+
+  
       -  build a model with that. use a slightly different notation.
       -  take all the X, and multiply by the W or weights.  and then sum them all together, and we take the sum , and turn into probability, sigmoid, and the probability of being a t-shirt.  we can build 3 models, one for shirt, one for t-shirt, one for dress
          <img width="770" height="591" alt="image" src="https://github.com/user-attachments/assets/8f2cdb55-5d9c-4d6f-8732-ad4b4daf70a4" />
+<img width="770" height="591" alt="Screenshot 2025-11-28 133905" src="https://github.com/user-attachments/assets/764d7496-f2ff-4c9f-a1a8-5575b39de299" />
+
+         
          instead of sigmoid , it will be a softmax function with a 3-dimensional output, first being probability of being a shirt, second is probability of being t-shirt, and third is probability of being dress
       <img width="779" height="578" alt="image" src="https://github.com/user-attachments/assets/43bafa6d-998a-4de6-823c-adf7477a2dab" />
+<img width="779" height="578" alt="Screenshot 2025-11-28 134115" src="https://github.com/user-attachments/assets/0bd5cff4-3b2d-49a4-95d6-5daf8bcbce09" />
+
+      
          simplified diagram
         <img width="902" height="670" alt="image" src="https://github.com/user-attachments/assets/9315620f-ceba-478a-b3bf-af8953d01687" />
+<img width="902" height="670" alt="Screenshot 2025-11-28 134219" src="https://github.com/user-attachments/assets/af45e831-0740-413b-8b71-7991026ee289" />
+
+        
         
          <img width="1027" height="703" alt="image" src="https://github.com/user-attachments/assets/8a7153eb-f057-4960-b53d-a627c87cfd4b" />
+<img width="1027" height="703" alt="Screenshot 2025-11-28 134321" src="https://github.com/user-attachments/assets/1447a12d-c4f4-443e-b653-b2680fc968e8" />
+
+         
 
        -  dense layer.... input to dense layer, and output of dense layer, the reason is dense, each element of input is connected to each output.... it is pretty dense....  each output ahs w, put all w together it becomes one w....  multiply w by x...
        -  dense layer is a matrix multiplication, that's why it is dense, because it multiplies each x by the weight, different weights for different models... etc.
            <img width="889" height="697" alt="image" src="https://github.com/user-attachments/assets/aba1d49c-dcf9-452c-9de0-55572f93888f" />
+<img width="889" height="697" alt="Screenshot 2025-11-28 134510" src="https://github.com/user-attachments/assets/6cb05cb1-6736-4313-8afc-52d3fc73bc49" />
+
+           
        -   we can put multiple dense layer together
        -   <img width="957" height="694" alt="image" src="https://github.com/user-attachments/assets/8b398950-2ec9-4703-80f2-07a210030974" />
 
+       <img width="889" height="697" alt="Screenshot 2025-11-28 134510" src="https://github.com/user-attachments/assets/961aa185-075a-4476-a6e2-56fd6dc0c8ed" />
+
+
 <img width="1061" height="521" alt="image" src="https://github.com/user-attachments/assets/a8a89180-68b1-48f6-a857-074178d39de4" />
+
+<img width="1061" height="521" alt="Screenshot 2025-11-28 134809" src="https://github.com/user-attachments/assets/694868f3-4554-4d14-aa8b-2a09b0a54880" />
+
   #####  Check out the https://cs231n.github.io/    [detailed explanation](https://cs231n.github.io/)
   It talks about the convolutional layers, and explains it.
   ##  General Pooling Layer
