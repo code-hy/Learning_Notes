@@ -19,12 +19,16 @@ Training a *blank slate* AI model requires huge computing resources (days and we
 Train a pre-trained model like Mobilenet V2,  it is already an expert in identifying things in the ImageNet dataset, it knows what dogs, cats, cars looks like.  We need
 to teach our new expert in identifying 10 fashion clothing items
 
-  1. Load Genius - start with the pre-trained model
-  2. Freeze Layers - lock existing layers so its core knowledge isn't erased, remove the top layer 
-  3. Put a Final Layer - classifies 1,000 objects
-  4. Plug the Final Layer into the existing layer
-  5. Train the New Part - train *only* this new layer with our fashion images
+3.  AI *Surgery* stitch exising model core layer, remove top layer, and add new layer for classifying 10 fashion objects
+  - Load Genius - start with the pre-trained model
+  - Freeze Layers - lock existing layers so its core knowledge isn't erased, remove the top layer 
+  - Put a Final Layer - classifies 1,000 objects
+  - Plug the Final Layer into the existing layer
+  - Train the New Part - train *only* this new layer with our fashion images
   
   
- 
+4.  Make it Robust
+   - overfitting, if the model memorises everything, it will be very good at identifying exact image in the training dataset, but fails, when the new image looks slightly different ie.
+     image may be rotated, or flipped, or slightly deformed
+   - need to show the image with slightly 
  
