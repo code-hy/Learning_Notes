@@ -39,3 +39,6 @@ to teach our new expert in identifying 10 fashion clothing items
    - critical technique
 5. Allows anyone to build powerful model 
  
+## Mind Map
+   ![pytorch mind map](images/mindmap.png)
+   
