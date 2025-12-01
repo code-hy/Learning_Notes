@@ -40,5 +40,5 @@ to teach our new expert in identifying 10 fashion clothing items
 5. Allows anyone to build powerful model 
  
 ## Mind Map
-   ![pytorch mind map](images/mindmap.png)
+   ![pytorch mind map](images/NotebookLM Mind Map (2).png)
    
