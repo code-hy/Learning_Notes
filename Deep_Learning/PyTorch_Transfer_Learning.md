@@ -27,8 +27,15 @@ to teach our new expert in identifying 10 fashion clothing items
   - Train the New Part - train *only* this new layer with our fashion images
   
   
-4.  Make it Robust
+4.  Make it Robust - Overfitting
    - overfitting, if the model memorises everything, it will be very good at identifying exact image in the training dataset, but fails, when the new image looks slightly different ie.
      image may be rotated, or flipped, or slightly deformed
-   - need to show the image with slightly 
+   - need to show the image with slightly different orientation
+   - instead of getting new set of data, we alter existing images , this is called **Data Augmentation** (programmatically creating new training data by altering existing images (eg rotating,
+     zooming, or flipping
+   - we get lots of training data for free, but by changing orientation it generates new set of data based on existing training data; we don't touch validation data, so we get true honest score on how data is doing 
+    <img width="345" height="347" alt="image" src="https://github.com/user-attachments/assets/f3b2b5ef-cbe9-4196-81d7-fd93f1c3fbf4" />
+   - *you want to just build on top of what they did* someone does the heavy lifting,  
+   - critical technique
+5. Allows anyone to build powerful model 
  
