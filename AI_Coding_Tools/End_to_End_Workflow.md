@@ -16,13 +16,14 @@
 2. Continue rest of the development using IDE (ie. Cursor, Windsurf, VSCode or Google Antigravity).  Alex used Antigravity as the AI assistant and Codespaces as the environment.  There is no need to do github CLI setup if
    we use Copilot or Codex - as we can just use VS Code to connect to Github Codespaces.  If things are run locally, there is no need to do the set-up.  However, NodeJS, Python and Docker need to be installed separately
    on the local environment
-   ``` step for connecting antigravity to codespaces
+   ```
+       step for connecting antigravity to codespaces
        Step 1: Install GitHub CLI
 
-Download from: https://github.com/cli/cli/releases
-Step 2: Authenticate
+        Download from: https://github.com/cli/cli/releases
+        Step 2: Authenticate
 
-\# Authenticate with GitHub using SSH
+    \# Authenticate with GitHub using SSH
 gh auth login
 \# Select: SSH protocol and your existing SSH key for GitHub
 \# Follow the remaining prompts
