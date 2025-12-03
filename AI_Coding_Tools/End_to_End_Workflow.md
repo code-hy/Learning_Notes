@@ -23,36 +23,36 @@
         Download from: https://github.com/cli/cli/releases
         Step 2: Authenticate
 
-    \# Authenticate with GitHub using SSH
-gh auth login
-\# Select: SSH protocol and your existing SSH key for GitHub
-\# Follow the remaining prompts
+    # Authenticate with GitHub using SSH
+    gh auth login
+    # Select: SSH protocol and your existing SSH key for GitHub
+    # Follow the remaining prompts
 
-\# authenticate for codespaces
-gh auth refresh -h github.com -s codespace
-Step 3: Create and Use Codespace
+    # authenticate for codespaces
+    gh auth refresh -h github.com -s codespace
+        Step 3: Create and Use Codespace
 
-gh codespace create
-\# Note the ID that's generated (e.g., expert-doodle-wr7wg9p5gqcgggw)
-Step 4: Connect via SSH
+        gh codespace create
+    # Note the ID that's generated (e.g., expert-doodle-wr7wg9p5gqcgggw)
+        Step 4: Connect via SSH
 
-gh codespace ssh -c expert-doodle-wr7wg9p5gqcgggw
-Next, get the SSH config:
+        gh codespace ssh -c expert-doodle-wr7wg9p5gqcgggw
+    Next, get the SSH config:
 
-gh codespace ssh --config -c expert-doodle-wr7wg9p5gqcgggw
-Add the output to ~/.ssh/config
+    gh codespace ssh --config -c expert-doodle-wr7wg9p5gqcgggw
+    Add the output to ~/.ssh/config
 
-If you encounter "cannot find the key" error:
+    If you encounter "cannot find the key" error:
 
-ssh-keygen -t ed25519 -f ~/.ssh/codespaces.auto
-ssh <codespace-name>
-Step 5: Use with Antigravity
+        ssh-keygen -t ed25519 -f ~/.ssh/codespaces.auto
+        ssh <codespace-name>
+        Step 5: Use with Antigravity
 
-Connect to codespace using Antigravity's SSH remote mode
-Open the project folder in /workspaces/
-Step 6: Stop Codespace When Done
+            Connect to codespace using Antigravity's SSH remote mode
+            Open the project folder in /workspaces/
+        Step 6: Stop Codespace When Done
 
-gh cs stop -c expert-doodle-wr7wg9p5gqcgggw
+            gh cs stop -c expert-doodle-wr7wg9p5gqcgggw
    ```
 
 3.  Running and Testing the Frontend Locally
