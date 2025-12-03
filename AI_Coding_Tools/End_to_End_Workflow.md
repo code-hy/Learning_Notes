@@ -22,17 +22,17 @@
 Download from: https://github.com/cli/cli/releases
 Step 2: Authenticate
 
-# Authenticate with GitHub using SSH
+\# Authenticate with GitHub using SSH
 gh auth login
-# Select: SSH protocol and your existing SSH key for GitHub
-# Follow the remaining prompts
+\# Select: SSH protocol and your existing SSH key for GitHub
+\# Follow the remaining prompts
 
-# authenticate for codespaces
+\# authenticate for codespaces
 gh auth refresh -h github.com -s codespace
 Step 3: Create and Use Codespace
 
 gh codespace create
-# Note the ID that's generated (e.g., expert-doodle-wr7wg9p5gqcgggw)
+\# Note the ID that's generated (e.g., expert-doodle-wr7wg9p5gqcgggw)
 Step 4: Connect via SSH
 
 gh codespace ssh -c expert-doodle-wr7wg9p5gqcgggw
