@@ -27,3 +27,5 @@ Use AWS Lambda for deploying the model
         return {"prediction": "clothes"}  # Sample response
       ``` 
 <img width="1280" height="764" alt="image" src="https://github.com/user-attachments/assets/1ee4e2e3-a64e-4eb4-9249-940bf41794c7" />
+
+<img width="1239" height="752" alt="image" src="https://github.com/user-attachments/assets/5fd7f428-7ed9-474f-b0c4-1934b6aca193" />
