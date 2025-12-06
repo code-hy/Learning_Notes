@@ -61,3 +61,12 @@
 6.  Add Docker for Containerisation.  A new file named **Dockerfile** will be set-up this contains the components required for the Docker container
 7.  Set-up CI/CD pipeline It will be set-up by AI in a .github/workflow directory with the name of cfi.yml)  
 8.  Deploy to Cloud (Render is easy to deploy, just ask AI to set-up the render.yaml file, and then connect Github to Render).  Render will automatically run deployment
+
+# Learnings
+- Use Lovable or Google AI Studio to set-up a minimal product with nice front-end
+- Upload to Github after set-up in Lovable or Google AI Studio
+- Use AI powered IDE.  Google Antigravity is a good one, as it has agentic capabilities.  Clone the Repo in Github
+- Continue developing the app, by asking it to develop the backend, the database for persistent storage
+- Use AI to develop integration tests, as this will be used in the CI/CD pipeline later on
+- Use AI to develop container, as this will ensure consistent experience across different users, as the container is a *simple lightweight, portable units for shipping applications*
+- Look for a cloud host, Render is an easy to use Cloud provider,  ask AI to integrate github, render, so any single change in source-code will automatically trigger a *test* and once the test passes, it will be deployed to render
