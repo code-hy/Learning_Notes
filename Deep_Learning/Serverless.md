@@ -36,3 +36,9 @@ Use AWS Lambda for deploying the model
   - Deploy the Code and run the test
 
     <img width="1284" height="663" alt="image" src="https://github.com/user-attachments/assets/42f931bd-e3ae-4654-9986-4635deb9fd89" />
+
+  -  For example, if we pass a parameter, url 
+
+    <img width="1275" height="668" alt="image" src="https://github.com/user-attachments/assets/9bd83cc4-4f42-4839-9630-e10fa233cced" />
+
+    <img width="1219" height="657" alt="image" src="https://github.com/user-attachments/assets/bd963223-b80d-41fe-a3c0-8a6cc1b0fc4e" />
