@@ -41,5 +41,9 @@ Use AWS Lambda for deploying the model
 
     <img width="1275" height="668" alt="image" src="https://github.com/user-attachments/assets/9bd83cc4-4f42-4839-9630-e10fa233cced" />
 
+<img width="1185" height="712" alt="image" src="https://github.com/user-attachments/assets/f8286b06-577b-44fa-8603-cf0c46f9d269" />
+
+<img width="1219" height="657" alt="image" src="https://github.com/user-attachments/assets/1b8b863b-4d19-4312-858e-d5f46982b6db" />
+
 
     <img width="1219" height="657" alt="image" src="https://github.com/user-attachments/assets/bd963223-b80d-41fe-a3c0-8a6cc1b0fc4e" />
