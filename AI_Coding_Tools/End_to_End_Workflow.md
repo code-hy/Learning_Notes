@@ -56,4 +56,8 @@
    ```
 
 3.  Running and Testing the Frontend Locally
-
+4.  Add Integration Tests
+5.  Add Backend Storage
+6.  Add Docker for Containerisation.  A new file named **Dockerfile** will be set-up this contains the components required for the Docker container
+7.  Set-up CI/CD pipeline It will be set-up by AI in a .github/workflow directory with the name of cfi.yml)  
+8.  Deploy to Cloud (Render is easy to deploy, just ask AI to set-up the render.yaml file, and then connect Github to Render).  Render will automatically run deployment
