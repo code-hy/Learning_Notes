@@ -26,3 +26,4 @@ Use AWS Lambda for deploying the model
         url = event["url"]  # Extract URL from input
         return {"prediction": "clothes"}  # Sample response
       ``` 
+<img width="1280" height="764" alt="image" src="https://github.com/user-attachments/assets/1ee4e2e3-a64e-4eb4-9249-940bf41794c7" />
