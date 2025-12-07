@@ -213,5 +213,7 @@ print('Model saved to model.bin')
      ```
   
 
+   Simplest way is to put everything in docker, need sck-learn, numpy all dependencies need to be installed.... simplest way is put lambda function in docker container, and then deploy docker container.... lambda is based on docker image...
 
+   
 
