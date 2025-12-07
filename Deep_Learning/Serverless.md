@@ -215,5 +215,16 @@ print('Model saved to model.bin')
 
    Simplest way is to put everything in docker, need sck-learn, numpy all dependencies need to be installed.... simplest way is put lambda function in docker container, and then deploy docker container.... lambda is based on docker image...
 
-   
+### Create Dockerfile
 
+```Dockerfile
+   FROM public.ecr.aws/lambda/python:3.13
+   RUN pip install uv
+   COPY pyproject.toml uv.lock ./
+   RUN uv sync
+   COPY model.bin .
+   COPY lambda_function.py .
+
+   CMD ["LAMBDA_FUNCTION.LAMBDA_HANDLER"]
+```
+   we are telling it that to invoke the lambda function, go to the lambda handler (entry point to the lambda function)
