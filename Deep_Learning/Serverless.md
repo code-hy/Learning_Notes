@@ -189,8 +189,9 @@ print('Model saved to model.bin')
 <img width="1044" height="559" alt="image" src="https://github.com/user-attachments/assets/2fd5c996-c619-4df9-a17e-de1d48eb8f05" />
 
   -  sign in to aws, go to lambda
-  -  create function, give functioin name,  runtime ... architecture...create new role, and leave the others as default
+  -  create function, give function name,  runtime ... architecture...create new role, and leave the others as default
 
+    
     ```python
        # lambda_function.py
        import pickle
@@ -211,7 +212,7 @@ print('Model saved to model.bin')
             "churn_probability": prob,
             "churn": bool(prob >= 0.5)
         }
-    ```
+     ```
   
 
 
