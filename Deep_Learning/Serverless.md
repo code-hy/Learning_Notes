@@ -173,7 +173,7 @@ print('Model saved to model.bin')
 
   ```bash
     cd train
-    uv sync
+    uv sync  # will actually install all the dependencies
     uv run python train.py
   ```
     
