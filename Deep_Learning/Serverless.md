@@ -176,9 +176,44 @@ print('Model saved to model.bin')
     uv sync
     uv run python train.py
   ```
+    
+  ```bash
+     uv init # initialise the project in the folder it is currently in 
+     uv add scikit-learn pandas  # adds packages 
+     uv run python train.py  # creates a model file 
+  ```
 
-  This finally creates the model.bin file which we will deploy.... 
+  This finally creates the model.bin file which we will deploy to Lambda...
+  - to deploy to Lambda we need to create a file ie. lambda_function.py
 
+<img width="1044" height="559" alt="image" src="https://github.com/user-attachments/assets/2fd5c996-c619-4df9-a17e-de1d48eb8f05" />
+
+  -  sign in to aws, go to lambda
+  -  create function, give functioin name,  runtime ... architecture...create new role, and leave the others as default
+
+    ```python
+       # lambda_function.py
+       import pickle
+
+with open('model.bin', 'rb') as f_in:
+    pipeline = pickle.load(f_in)
+
+def predict_single(customer):
+    result = pipeline.predict_proba(customer)[0, 1]
+    return float(result)
+
+def lambda_handler(event, context):
+    # print("Parameters:", event)
+
+    customer = event['customer']
+    prob = predict_single(customer)
+
+    return {
+        "churn_probability": prob,
+        "churn": bool(prob >= 0.5)
+    }
+
+    ```
   
 
 
