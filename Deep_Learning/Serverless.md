@@ -50,3 +50,31 @@ Use AWS Lambda for deploying the model
 
 It will typically return results....results = predict(url)
 <img width="1055" height="668" alt="image" src="https://github.com/user-attachments/assets/99aed6b3-c7fe-41fc-a43a-18dec6cbe044" />
+
+Notes:
+  - lambda you pay only for the requests
+  - no need to set-up infrastructure
+  - no need about machines, pay only for the requests
+  - very convenient
+
+  <img width="839" height="686" alt="image" src="https://github.com/user-attachments/assets/6723aaa9-2503-4307-9bc3-60105ee39dcf" />
+
+Alex demonstrated the join.datatalks invite
+
+<img width="1090" height="626" alt="image" src="https://github.com/user-attachments/assets/6f77f341-6dc0-47bb-a822-5eb543810036" />
+
+user use link  join.datatalks.club , and it will be redirected to the invite link...use lambda function
+  <img width="1107" height="662" alt="image" src="https://github.com/user-attachments/assets/92dd5570-4844-4929-9089-d1a9fc871a0c" />
+
+  simple lambda function, in javascript
+  <img width="987" height="682" alt="image" src="https://github.com/user-attachments/assets/5039a373-4155-42a7-9229-1e7796a22148" />
+
+ actual invite URL is in config.
+
+ <img width="1069" height="568" alt="image" src="https://github.com/user-attachments/assets/a874a35b-f5c2-482e-94cc-f12360cd9915" />
+
+- there is a free-tier , 
+   
+use tensor flow lite....
+
+
