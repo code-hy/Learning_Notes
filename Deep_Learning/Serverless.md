@@ -47,3 +47,6 @@ Use AWS Lambda for deploying the model
 
 
     <img width="1219" height="657" alt="image" src="https://github.com/user-attachments/assets/bd963223-b80d-41fe-a3c0-8a6cc1b0fc4e" />
+
+It will typically return results....results = predict(url)
+<img width="1055" height="668" alt="image" src="https://github.com/user-attachments/assets/99aed6b3-c7fe-41fc-a43a-18dec6cbe044" />
