@@ -190,8 +190,8 @@ print('Model saved to model.bin')
 
   -  sign in to aws, go to lambda
   -  create function, give function name,  runtime ... architecture...create new role, and leave the others as default
-    ```python
-       # lambda_function.py
+    ```python lambda.function.py
+        
        import pickle
         with open('model.bin', 'rb') as f_in:
         pipeline = pickle.load(f_in)
