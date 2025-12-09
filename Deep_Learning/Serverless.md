@@ -277,3 +277,106 @@ COPY lambda_function.py model.bin ./
 CMD ["lambda_function.lambda_handler"]
 ```
 
+need to publish or deploy docker image to ECR amazon elastic container registry, create a publish.sh
+```bash
+#!/bin/bash
+
+IMAGE_NAME="churn-prediction-lambda"
+AWS_REGION="eu-west-1"
+
+AWS_ACCOUNT_ID=$(aws sts get-caller-identity | jq -r ".Account")
+
+# Get latest commit SHA and current datetime
+COMMIT_SHA=$(git rev-parse --short HEAD)
+DATETIME=$(date +"%Y%m%d-%H%M%S")
+IMAGE_TAG="${COMMIT_SHA}-${DATETIME}"
+
+ECR_URI="${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com"
+IMAGE_URI="${ECR_URI}/${IMAGE_NAME}:${IMAGE_TAG}"
+
+# run it only once
+# aws ecr create-repository \
+#   --repository-name ${IMAGE_NAME} \
+#   --region ${AWS_REGION}
+
+aws ecr get-login-password \
+  --region ${AWS_REGION} \
+| docker login \
+  --username AWS \
+  --password-stdin ${ECR_URI}
+
+docker build -t ${IMAGE_NAME}:${IMAGE_TAG} .
+docker tag ${IMAGE_NAME}:${IMAGE_TAG} ${IMAGE_URI}
+docker push ${IMAGE_URI}
+
+aws lambda update-function-code \
+  --function-name churn-prediction-docker \
+  --image-uri ${IMAGE_URI} \
+  --region ${AWS_REGION}
+```
+
+publish with v1 version.... 
+- create function
+- container image
+- churn-prediction-docker
+- add the image uri
+
+sagemaker plus lambda is expensive...
+
+if model is 2gb, it will be invoked only once, when function is invoked the first time,  first request it will be loaded, once in memory, it will not require reloading...
+if no request, then it will be freed, then next time, it will need to load it again,  if you send many request, the lambda is kept in warm-up state, no need to load model all time, when it goes to sleep stage, then
+if you wake it up, it will load the model again. test, it by creating test event, and event json...
+<img width="1305" height="660" alt="image" src="https://github.com/user-attachments/assets/0c670c01-bd00-4b7c-a696-32f085775afe" />
+
+For lambda - tensorflow-lite is not good anymore,  tensorflow-lite is okay previously...  
+<img width="504" height="289" alt="image" src="https://github.com/user-attachments/assets/1232e18e-4060-4e63-8c94-4afe302cea45" />
+
+
+convert to onnx, and onnx runtime ...
+<img width="502" height="411" alt="image" src="https://github.com/user-attachments/assets/a8527c65-60e0-4218-b3e2-73061411f415" />
+
+
+<img width="936" height="555" alt="image" src="https://github.com/user-attachments/assets/34475325-c1d1-458d-b08b-4f7a047eaf0c" />
+
+best to convert to onnx within docker...
+```python
+from tensorflow import keras
+
+model = keras.models.load_model('clothing-model-new.keras')
+model.export("clothing-model-new_savedmodel")
+```
+
+run the docker image...  run model mapping..
+<img width="1217" height="668" alt="image" src="https://github.com/user-attachments/assets/3265dbd4-a6dc-4bbb-866b-ec7944ed54c2" />
+
+<img width="1380" height="612" alt="image" src="https://github.com/user-attachments/assets/45f6efdb-7829-4a0d-81ec-4b92dc1ad6ad" />
+
+keras image helper...
+function is simple, it divides the value by 127.5 and then subtract 1.0
+
+package everything into lambda function...
+
+<img width="706" height="353" alt="image" src="https://github.com/user-attachments/assets/dd9fc2aa-fe70-413d-8b05-0fbb72a32d37" />
+you can test the docker image locally..
+
+via docker run
+
+
+
+#### next steps
+1. create ecr repo
+2. publish image
+3. create lambda function to point to repo
+4. configure by giving 500 ram, timeout to 30 s or 1 minute
+5. keras convert to tensorflow to to save model, and then to onnx
+6. can also use pytorch, and then to onnx
+7. ask gemini, convert tensorflow to pytorch
+8. mobilenet, require different sizes...
+9. export to onnx...
+10. pytorch already has the onnx export library
+
+11. totensor divides everything by 255., changes shape, channels, height, width, preprocessing that's different,  normalises,,,  
+transpose... etc...  
+
+
+
