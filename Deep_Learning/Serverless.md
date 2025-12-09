@@ -211,6 +211,8 @@ print('Model saved to model.bin')
             "churn": bool(prob >= 0.5)
         }
      ```
+
+Create using uv , uv add packages, then create docker file
   
 
    Simplest way is to put everything in docker, need sck-learn, numpy all dependencies need to be installed.... simplest way is put lambda function in docker container, and then deploy docker container.... lambda is based on docker image...
@@ -225,8 +227,38 @@ print('Model saved to model.bin')
    COPY model.bin .
    COPY lambda_function.py .
 
-   CMD ["LAMBDA_FUNCTION.LAMBDA_HANDLER"]
+   CMD ["lambda_function.lambda_handler"]
 ```
    we are telling it that to invoke the lambda function, go to the lambda handler (entry point to the lambda function)
 
+### Build Dockerfile
 
+```bash
+   docker build -t churn-prediction-lambda .
+```
+
+### To run docker file
+
+```bash
+   docker run -it --rm -p 8080:8080 churn-prediction-lambda
+```
+
+### To test docker file
+#### Create test.py
+```python
+import requests
+import json
+
+url = 'http://localhost:8080/2015-03-31/functions/function/invocations'
+
+
+with open('customer.json', 'r') as f_in:   
+    customer = json.load(f_in)
+
+result = requests.post(url, json=customer).json()
+print(result)
+```
+
+```bash
+   python test.py
+```
