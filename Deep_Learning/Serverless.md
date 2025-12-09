@@ -262,3 +262,18 @@ print(result)
 ```bash
    python test.py
 ```
+
+It doesn't work because the pip install within the Dockerfile installs to a virtual environment, but in Lambda, it needs to be done differently. Need to be installed to global environment...  
+
+```dockerfile
+FROM public.ecr.aws/lambda/python:3.13
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /bin/
+
+COPY pyproject.toml uv.lock ./
+RUN uv pip install --system -r <(uv export --format requirements-txt)
+
+COPY lambda_function.py model.bin ./
+
+CMD ["lambda_function.lambda_handler"]
+```
+
