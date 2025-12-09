@@ -41,6 +41,11 @@ Deploying ML models in this workshop follows a repeated pattern: train/export th
 
 - Train a model locally (e.g., Scikit-learn churn model, Keras CNN, or PyTorch model) and save it to disk in the framework’s native format (pickle, Keras .h5, PyTorch .pt) or TensorFlow SavedModel.[1]
 - Convert framework-specific models to ONNX where possible (Keras/TensorFlow via TF→SavedModel→ONNX, PyTorch via torch.onnx.export) to get a lightweight, framework-agnostic artifact.[1]
+  ```bash
+     cd train
+     uv sync
+     uv run python train.py  # taking the train.py script to create a model.bin
+  ```
 
 ## Building a Lambda-ready Docker image
 
