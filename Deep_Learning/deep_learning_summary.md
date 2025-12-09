@@ -17,3 +17,16 @@ This video wraps up the serverless deployment session by emphasizing that AWS La
 - The approach is not limited to deep learning: traditional models like XGBoost, linear models, or scikit‑learn models can also be packaged and deployed with Lambda for use in projects and capstone work.[1]
 
 [1](https://www.youtube.com/watch?v=bu3nPiHCNLU&list=PL3MmuxUbc_hIhxl5Ji8t4O6lPAOpHaCLR&index=86)
+
+
+## Key Summary
+- AWS Lambda is way of deploying models without having to worry about servers, define lambda_handler, take code and put into docker
+- Tensorflow Lite is a lightweight alternative to Tensorflow that only focuses on inference
+- To deploy your code, package it in a Docker container
+- Expose lambda function via APi gateway
+
+- google cloud, microsoft azure provides serverless as well
+- works for deep learning models, and logistic regression models as well
+
+- 
+- 
