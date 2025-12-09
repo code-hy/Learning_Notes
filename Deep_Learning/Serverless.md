@@ -228,3 +228,5 @@ print('Model saved to model.bin')
    CMD ["LAMBDA_FUNCTION.LAMBDA_HANDLER"]
 ```
    we are telling it that to invoke the lambda function, go to the lambda handler (entry point to the lambda function)
+
+
