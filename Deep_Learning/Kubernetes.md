@@ -112,3 +112,27 @@ EKSCTL - similar to Kubectl
 
 Create cluster using eksctl ---- eksctl create cluster --name zoomcamp-eks...
 
+#### Deploying to EKS
+1. use EKSCTL CLI. Install in bin folder, wget from the website, and use the tar.gz.  Extract the tar , tar xzfv eksctl_Linux_amd64.tar.gz.  Remove the tar.gz
+
+<img width="950" height="309" alt="image" src="https://github.com/user-attachments/assets/a5b34d6b-7e6c-4886-b13f-0d77b4c8f7f3" />
+<img width="961" height="137" alt="image" src="https://github.com/user-attachments/assets/be377d0f-0d54-465c-9fae-ef287c9fa165" />
+
+
+2. Go back to working directory. Issue
+   ```bash
+      eksctl create cluster --name zoomcamp-eksctl
+   ```
+3. Create eks-config.yaml
+<img width="721" height="442" alt="image" src="https://github.com/user-attachments/assets/ac368455-f27e-4008-ad6a-d4624fba3cbe" />
+
+<img width="1248" height="678" alt="image" src="https://github.com/user-attachments/assets/88dfbb49-3468-4e3f-b9d2-6f3d1ee66a67" />
+
+```bash
+   eksctl create cluster -f eks-config.yaml
+   aws ecr create-repository --repository-name mlzoomcamp-images
+```
+4. 
+5. 
+6. 
+7. set-up config.yaml 
