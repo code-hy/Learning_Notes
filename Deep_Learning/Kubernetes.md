@@ -1,6 +1,62 @@
 # Workshop Notes
 
-This video walks through taking an existing ML model, wrapping it in a FastAPI web service, containerizing it with Docker, and deploying it on Kubernetes with Horizontal Pod Autoscaling so it can scale under load. It uses example code from the ML Zoomcamp repository and a dedicated workshop repo to show a practical, production-style deployment pattern.  
+This video walks through taking an existing ML model, wrapping it in a FastAPI web service, containerizing it with Docker, and deploying it on Kubernetes with Horizontal Pod Autoscaling so it can scale under load. It uses example code from the ML Zoomcamp repository and a dedicated workshop repo to show a practical, production-style deployment pattern.  Alexey went thru the entire process of deployment using Kubernetes and docker.
+
+## Kubernetes
+Also known as K8s, is an open-source system for automating deployment, scaling, and management of containerised applications.  So Kubernetes manages 'dockers'
+<img width="1262" height="680" alt="image" src="https://github.com/user-attachments/assets/6ac3825b-58d8-4307-851f-67da040dd39a" />
+
+Node is equivalent to a computer/server or EC2 instance in AWS.
+Each Node has PODS, which is a container that runs a specific images... each node can have one or more pods...group pods in deployments
+<img width="1218" height="777" alt="image" src="https://github.com/user-attachments/assets/f1bdba0e-7b92-4baf-b01c-05503b1da46d" />
+
+within one deployment, they have the same image...same parameters, same image configuration, same environment variables
+
+<img width="1165" height="717" alt="image" src="https://github.com/user-attachments/assets/5c783f32-2c4e-4227-a662-bb05842c4bd6" />
+
+larger nodes for tensor-flow serving model TF-Serving Deployment, so pods are larger
+
+<img width="1163" height="682" alt="image" src="https://github.com/user-attachments/assets/2d74eae8-4ddb-4626-9de8-c85fd8eb8480" />
+
+POD - docker container that runs on a node.
+
+Deployment - group of PODS with the same image and configuration.
+
+Services - gateway service, and tensor flow model service,  service is entry point to our deployment..service responsible for routing the request. service sents request to any available pod.
+
+
+<img width="1198" height="725" alt="image" src="https://github.com/user-attachments/assets/ce76694b-2e8a-4e1e-9c16-761c69171f98" />
+
+<img width="1251" height="719" alt="image" src="https://github.com/user-attachments/assets/729a7f36-d9cf-4ae5-8ffb-d704e3d3e339" />
+
+1. user sends request to gateway service
+2. gateway service routes to a gateway pod
+3. gateway pod then sends it to the model service
+4. model service sends it to the TF-Serving Pod
+5. TF-serving pod then sends result back to model service
+6. model service then sends it back to the gateway pod
+7. gateway pod then sends it to the gateway service
+8. gateway service sends results back to the user
+
+<img width="1128" height="474" alt="image" src="https://github.com/user-attachments/assets/af9834d6-897e-4410-87ea-bc6aa655788a" />
+
+gateway service should be external, and model -service is internal..
+
+<img width="1100" height="736" alt="image" src="https://github.com/user-attachments/assets/c2b8b776-561c-472a-a045-a487c213b409" />
+
+<img width="1167" height="623" alt="image" src="https://github.com/user-attachments/assets/7d4e97db-fccb-43df-aabb-e74bc75e3645" />
+
+
+9. 
+
+<img width="1063" height="742" alt="image" src="https://github.com/user-attachments/assets/5c8f13a9-1b95-4394-bbe7-c01b71fa2a68" />
+
+INGRESS - entry point to the cluster
+
+Bunch of clients, to deal with load, Kubernetes can start up more pods... automatically scale up deployment when load increases... HPA  - horizontal pod autoscaler...
+
+<img width="945" height="702" alt="image" src="https://github.com/user-attachments/assets/dc4dae6e-7001-46f7-bffc-dfc7ab2ceb45" />
+
 
 ## High-level summary
 
