@@ -136,3 +136,29 @@ Create cluster using eksctl ---- eksctl create cluster --name zoomcamp-eks...
 5. 
 6. 
 7. set-up config.yaml 
+8. EKS cluster is **not *free*** ,
+9. apply the config,
+    ```bash
+       kubectl apply -f model-deployment.yaml
+       kubectl apply -f model-service.yaml
+       kubectl get pod
+       kubectl get service
+       kubectl port-forward service/tf-serving-clothing-model 8500:8500
+       kubectl apply -f gateway-deployment.yaml
+       kubectl apply -f gateway-service.yaml
+       kubectl get pod
+       kubectl get service
+       kubectl port-forward service/gateway 8080:80 
+    ```
+11.    Get URL go to the test file, and put the long URL...
+<img width="1264" height="763" alt="image" src="https://github.com/user-attachments/assets/0eeb4b26-7ef8-4821-ae1b-17e6720a98ac" />
+
+12.   type of service is load balancer, and it goes ... deploy model with kubernetes, aws takes care of it..  load balancer is open to everyone.... often times you want to restrict services, you need to do the same thing, lambda function.
+13.   Stop cluster
+```bash
+   eksctl delete cluster --name mlzoomcamp-eks
+
+```
+14.   
+15.           
+16. 
