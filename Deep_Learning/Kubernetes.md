@@ -100,3 +100,15 @@ This workshop shows how to take an ML model, wrap it in a FastAPI service, conta
 - Emphasize that this pattern (FastAPI + Docker + K8s + HPA) is a reusable blueprint for production-style ML model deployments.
 
 [1](https://www.youtube.com/live/c_CzCsCnWoU)
+
+
+## Appendix
+
+deploy tensor flow model, tfserving , using Kind, 
+
+EKS - elastic kubernetes service...
+
+EKSCTL - similar to Kubectl
+
+Create cluster using eksctl ---- eksctl create cluster --name zoomcamp-eks...
+
