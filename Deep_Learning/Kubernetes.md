@@ -162,3 +162,77 @@ Create cluster using eksctl ---- eksctl create cluster --name zoomcamp-eks...
 14.   
 15.           
 16. 
+#### Difference between Kubernetes, Kind and Kubectl
+Kubernetes, Kind, and Kubectl differ in their function: Kubernetes is the orchestration platform, Kind is a tool used to create local Kubernetes clusters for development/testing, and Kubectl is the command-line interface used to interact with any Kubernetes cluster. 
+Here is a breakdown of each component:
+Kubernetes (K8s): This is an open-source platform for managing containerized workloads and services at scale. It orchestrates tasks like deployment, scaling, and management of applications in a cluster of machines (nodes). It is the underlying system that manages your applications.
+Kind (Kubernetes in Docker): This is a tool designed to run a local Kubernetes cluster by using Docker containers as the cluster nodes. Kind is particularly useful for testing Kubernetes itself, for local development, and for continuous integration (CI/CD) pipelines because it can quickly create and delete multi-node clusters. It requires Docker to run.
+Kubectl: This is the command-line interface (CLI) tool for users to interact with a Kubernetes cluster. You use kubectl commands (e.g., kubectl get nodes, kubectl deploy application) to send instructions to the Kubernetes cluster's API server, whether that cluster is local (like one created by Kind) or managed in the cloud (like Google Kubernetes Engine (GKE) or Amazon EKS). 
+In summary:
+Component 	Type	Primary Function
+Kubernetes	Platform	Container orchestration and management system.
+Kind	Tool	Creates and runs a local Kubernetes cluster (using Docker).
+Kubectl	CLI Tool	Manages and interacts with any running Kubernetes cluster.
+
+#### Workshop steps
+
+
+1. Install Kubernetes
+```bash
+cd 
+
+mkdir bin && cd bin
+
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+chmod +x kubectl
+
+cd
+
+export PATH="${PATH}:${HOME}/bin"  #  add it to .bashrc
+                                  
+
+which kubectl
+```
+   
+2. Install Kind (kubernetes in docker)  kubernetes cluster that can be run locally 
+```bash
+curl -Lo ${HOME}/bin/kind https://kind.sigs.k8s.io/dl/v0.20.0/kind-linux-amd64
+chmod +x ${HOME}/bin/kind
+```
+3. Verify Installation
+```bash
+kind version
+```
+4. Install uv (package manager for python application)
+```bash
+pip install uv
+```
+5. Create uv project
+```bash
+uv init
+```
+6. Create a KIND cluster
+```bash
+kind create cluster --name mlzoomcamp
+kubectl cluster-info
+kubectl get nodes
+
+```
+
+Create a single-node Kubernetes cluster, configure kubectl to use this cluster, and then take a few minutes on first run.  , you should see Node Ready status.
+   
+7. Convert model to ONNX (model agnostic environment for inference)
+We use pre-trained Pytorch model that classifies clothing items, which is in ONNX format
+
+```bash
+mkdir service 
+cd service
+
+wget https://github.com/DataTalksClub/machine-learning-zoomcamp/releases/download/dl-models/clothing_classifier_mobilenet_v2_latest.onnx -O clothing-model.onnx
+```
+
+8.  Build the FASTAPI service
+
+   ```bash
+   ```
+   
