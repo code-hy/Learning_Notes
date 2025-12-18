@@ -381,5 +381,81 @@ Run the test:
 we should see the predictions for the clothing item.
 
 
-10.  
-   
+10.  health test check
+    ```bash
+    curl localhost:8080/health
+    ```
+it should come back with status healthy
+
+11. run the predict again, and it will result in the 'pants' of the highest probability
+
+12. uv has dependencies in pyproject.toml and with uv sync, it's easy
+13. create a folder k8s
+14. add *.onnx and .venv in gitignore
+15. Kubernetes - **nodes** are the machines , **pods** one single instance of an application.. docker run it will run on one port, **deployments** group of pods that run same application same purpose
+   at one time, we can scale to 2 pods, same replicas, same image and same tag, deployed multiple times, and in front of pods there is load balancer , and **services** would be load balancer, pods would be deployment, ** HPA** ...hpa decides how many one or two pods, etc.
+<img width="834" height="327" alt="image" src="https://github.com/user-attachments/assets/874cc5dd-a72d-4b59-9f3d-2044db02d9f5" />
+
+
+**ingress**   
+
+16. deployment.yaml
+    <img width="689" height="304" alt="image" src="https://github.com/user-attachments/assets/5a6cee50-ae3d-4c39-b91d-150eb8278083" />
+<img width="565" height="469" alt="image" src="https://github.com/user-attachments/assets/abfef9e5-5ad6-43e6-b753-1c3567c4b051" />
+
+deployment has 2 replicas, it mens there are 2 pods, same model, running two mini containers...  you can run docker run twice, , run multiple docker containers...  the template is how we define the pod, we give it 
+some label,  what we need to worry about, things are always the same.  then we have specifications for port, we have the image   clothing-classifier:v1.... , we need to make image available for kind... 
+if we create a new version, we simply replace it,...  port that is exposed in the container, how much resources we give...  250mi  is 250 millicore or q quarter of CPU 0.25
+
+a node can have 8 cores and 16gb ram... on the node, we can have 4 * 8 pods...  
+
+liveliness probe is the health endpoint...   periodic send /health request, and if it replies, then it is healthy...
+
+17. run kubectl apply -f deployment.yaml
+18. run kind load docker-image clothing-classifier:v1 --name mlzoomcamp
+
+    <img width="1392" height="567" alt="image" src="https://github.com/user-attachments/assets/c0eca31a-59f2-4f39-a55e-0e2b480748e1" />
+19. run kind create cluster --name mlzoomcamp
+
+20. run create cluster, load docker image, and then kubectl deployment...
+21. create service.yaml
+22. nodeport is exposed...  simple computer that does load balancing, it has cluster-ip...  forward nodeport to our host machine, and we cna send request there...  service can be configured to be loadbalancer.. once deployed, you have url...  do port forward....
+```bash
+kubectl port-forward service/clothing-classifier 30080:8080
+
+```
+23. then we can do curl localhost:30080/health
+24. Hpa horizontal pod auto-scaler... we need metrics server for that...
+    <img width="1315" height="584" alt="image" src="https://github.com/user-attachments/assets/259b08a4-4933-4965-8e71-91e870bf68db" />
+
+metrics server expoes metrics like how much cpu are being used on each of the pods
+patch without TLS, we don't have https.. we run things locally... 
+
+kubectl get deployment metrics-servicer -n kube-system
+<img width="870" height="423" alt="image" src="https://github.com/user-attachments/assets/979be0d2-b60d-4091-ba35-5d0141011126" />
+
+we rely on cpu utilisation or lambda requests...  
+
+<img width="920" height="367" alt="image" src="https://github.com/user-attachments/assets/2ccf873a-51ae-46ca-8a19-ea96fc6c91b2" />
+load_test.py  testing serveral requests ....  
+
+successful and failed request, if auto scaling didn't work...
+
+uv run python load_test.py
+
+uv add requests
+
+kubectl get deployments  
+
+kubectl get hpa  
+
+replias can handle 4..  watch it  kubectl get hpa -w  
+
+kubernetes easy to auto-scale.... ... know how to deploy things to the cluster...
+
+platform is ecs, alternative to kubernetes, whcih is more lightweight... 
+
+kind is only for local testing... mini-cube,  kind is more convenient than mini-cube...don't productionise... how to transition from devops to mlops.... what is covered in mlops, that is enough.
+
+
+
