@@ -1,5 +1,4 @@
 flowchart TB
-    %% Title (can be shown by your markdown renderer)
     %% Enterprise Architecture — Four Domain Layers
 
     subgraph B[Business Architecture]
@@ -30,5 +29,6 @@ flowchart TB
         T4[Platforms & Runtimes]
     end
 
-    %% Vertical flow between layers
-    B --- D --- A --- T
+    B --- D
+    D --- A
+    A --- T
