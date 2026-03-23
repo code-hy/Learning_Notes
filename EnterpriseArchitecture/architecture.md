@@ -17,7 +17,7 @@ flowchart TB
     end
 
     subgraph A[Application Architecture]
-        A1[Enterprise Apps (ERP/CRM)]
+        A1["Enterprise Apps (ERP/CRM)"]
         A2[APIs & Microservices]
         A3[Integration Layer / ESB]
         A4[Front-end & Portals]
