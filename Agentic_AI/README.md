@@ -68,5 +68,73 @@
 
    <img width="1335" height="687" alt="image" src="https://github.com/user-attachments/assets/e2d89b4c-7427-4e6f-b136-78470bc2c2ba" />
  
+### Evaluating the impact of reflection
+**Create a dataset of prompts and answers - this is technique used in datatalks llm-zoomcamp)**
+<img width="1239" height="687" alt="image" src="https://github.com/user-attachments/assets/6b2d047b-1e28-46ab-b00e-9462377b4450" />
 
+_run each time you change the reflection prompt_
 
+<img width="1024" height="742" alt="image" src="https://github.com/user-attachments/assets/951f4bf9-83df-4715-89df-522bff15d83a" />
+
+```mermaid
+flowchart LR
+    %% Node Definitions
+    A(["Which color of product has the highest total sales?"]) --> B[LLM]
+    
+    subgraph Reflection_Step ["Reflect on V1 SQL, write V2 query"]
+        C[LLM]
+    end
+
+    D["execute SQL"]
+    E["V2 query results"]
+    F[LLM]
+    G([Answer question])
+
+    %% Connections
+    B -- "Generate SQL query" --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+
+    %% Styling
+    style A fill:#fbebeb,stroke:#d9534f,stroke-width:1px,color:#000
+    style Reflection_Step fill:none,stroke:#d9534f,stroke-width:2px,stroke-dasharray: 5 5
+    style D fill:#eafaf1,stroke:#27ae60,stroke-width:1px,color:#000
+```
+
+### Reflection results
+
+Comparison of having ground truth, no reflection, and with reflection (the reflection prompt is - reflecton V1 SQL , and write V2 SQL)
+This is for objective tasks
+
+| Prompts | Ground truth answer | No reflection | With reflection |
+| :--- | :--- | :--- | :--- |
+| **Number of items sold in May 2025?** | 1201 | 980 | 1201 |
+| **Most expensive item?** | Airflow sneaker | Airflow sneaker | Airflow sneaker |
+| **How many styles carried?** | 14 | 14 | 14 |
+| **Accuracy Rate** | — | **87% correct** | **95% correct** |
+
+This is for subjective tasks (by a human or use LLM to judge)
+<img width="932" height="480" alt="image" src="https://github.com/user-attachments/assets/7be3f090-6ae8-48be-ac2f-4cf8c2e17206" />
+
+<img width="880" height="400" alt="image" src="https://github.com/user-attachments/assets/57bc1653-1783-48c4-8909-304fa4231f10" />
+
+Grading with a rubric gives more consistent results - like scores binary 1 or 0 for each criteria and then add them all up.
+
+<img width="890" height="389" alt="image" src="https://github.com/user-attachments/assets/5bed68c3-bc0d-4ece-8161-5710babfecd9" />
+
+<img width="832" height="486" alt="image" src="https://github.com/user-attachments/assets/b2f2be9c-c785-42df-9c59-3118d323cbaa" />
+
+#### Evaluating reflection
+* Objective evals
+  - Code-based evals are easier
+  - Build a dataset of ground truth examples
+* Subjective evals
+  - Use LLM as a judge
+  - Rubric-based grading is better
+ 
+### Reflection using external feedback
+<img width="1320" height="646" alt="image" src="https://github.com/user-attachments/assets/7ec42b48-d1db-449d-9053-de818cff0dbb" />
+
+  
