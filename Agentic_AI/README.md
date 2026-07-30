@@ -175,3 +175,23 @@ Function to call
 <img width="889" height="432" alt="image" src="https://github.com/user-attachments/assets/822eb0d9-03ea-45fe-bc88-fb0641724987" />
 
 <img width="900" height="444" alt="image" src="https://github.com/user-attachments/assets/2f2733ca-0e3f-4e49-a3b8-a7a78ce1e17d" />
+
+#### Tool Use - Code Execution
+
+<img width="874" height="396" alt="image" src="https://github.com/user-attachments/assets/f89ce271-f925-4e60-b8d6-fe5bed1f7062" />
+
+write a tool that will execute code
+
+<img width="889" height="462" alt="image" src="https://github.com/user-attachments/assets/a37d50c6-4da5-466a-95b3-f81edc64012c" />
+
+_exec(output)_
+
+**Use Docker or E2b for sandboxing**  
+<img width="858" height="423" alt="image" src="https://github.com/user-attachments/assets/8f96d614-5419-4610-9196-8b783a842e34" />
+
+### MCP ###
+MODEL CONTEXT PROTOCOL
+instead of building separate integration for each tool, one MCP server is created for each app.
+
+<img width="830" height="453" alt="image" src="https://github.com/user-attachments/assets/81dbf442-a835-4ad3-94e5-55b713b683f2" />
+
