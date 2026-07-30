@@ -137,4 +137,15 @@ Grading with a rubric gives more consistent results - like scores binary 1 or 0 
 ### Reflection using external feedback
 <img width="1320" height="646" alt="image" src="https://github.com/user-attachments/assets/7ec42b48-d1db-449d-9053-de818cff0dbb" />
 
-  
+<img width="902" height="417" alt="image" src="https://github.com/user-attachments/assets/225b3e45-4539-4c3f-a35f-6eaf9fd8b291" />
+
+#### Other examples of tools to help reflection
+
+| Challenge | Example | Source of Feedback |
+|:--- | :--- | :--- |
+| Mentioning competitors | Our company's shoes are better than RivalCo | Pattern matching for competitor names |
+| Fact checking an essay | The Taj Mahal was built in 1648 | Web search results |
+| LLM won't follow output length guidelines | Essay is over word limit | Word count tool |
+
+
+
