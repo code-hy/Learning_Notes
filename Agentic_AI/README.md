@@ -147,5 +147,27 @@ Grading with a rubric gives more consistent results - like scores binary 1 or 0 
 | Fact checking an essay | The Taj Mahal was built in 1648 | Web search results |
 | LLM won't follow output length guidelines | Essay is over word limit | Word count tool |
 
+## Tool Use
 
+Function to call
+<img width="894" height="430" alt="image" src="https://github.com/user-attachments/assets/c7d75497-bed4-4a1b-844b-75a211f87415" />
+
+### Examples
+| Prompt | Tool | Output |
+| :--- | :--- | :--- |
+| **Can you find some Italian restaurants near Mountain View, CA?** | `web_search(query="restaurants near Mountain View, CA")` | Spaghetti City is an Italian restaurant in Mountain View... |
+| **Show me customers who bought white sunglasses** | `query_database(table="sales", product="sunglasses", color="white")` | 28 customers bought white sunglasses. Here they are... |
+| **How much money will I have after 10 years if I deposit $500 at 5% interest?** | `interest_calc(principal=500, interest_rate=5, years=10)`<br><br>**OR**<br><br>`eval("500 * (1 + 0.05) ** 10")` | $814.45 |
+
+<img width="916" height="432" alt="image" src="https://github.com/user-attachments/assets/76ab4277-6495-4d6f-99f3-021520bda7e6" />
+
+### Creating a tool
+
+<img width="838" height="312" alt="image" src="https://github.com/user-attachments/assets/9e3316b5-2619-482a-a9e0-ee030bbe4611" />
+
+<img width="888" height="463" alt="image" src="https://github.com/user-attachments/assets/f9e70f28-94d6-45e8-b9b2-4fa43351ec14" />
+
+<img width="890" height="466" alt="image" src="https://github.com/user-attachments/assets/f2b00210-5383-4098-a181-7920fa272477" />
+
+### Tool syntax
 
