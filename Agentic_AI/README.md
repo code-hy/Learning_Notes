@@ -212,5 +212,20 @@ instead of building separate integration for each tool, one MCP server is create
 * As you find places where your evals fail to capture human judgement as to what system is better, use that as an opportunity to improve the metric
 * Look for places where performance is worse than humans
 
+#### Error analysis and priotizing next steps.
+<img width="1314" height="729" alt="image" src="https://github.com/user-attachments/assets/2cce2e76-f245-42fa-8028-242fea730b5d" />
+<img width="1235" height="596" alt="image" src="https://github.com/user-attachments/assets/391c3b9a-d3ff-4013-a820-e4305946e2f0" />
+**Examine traces to better understand each step in the workflow**
+<img width="1325" height="722" alt="image" src="https://github.com/user-attachments/assets/207a4b42-05ec-4692-9ded-e04e9b5c50e4" />
+
+<img width="1264" height="653" alt="image" src="https://github.com/user-attachments/assets/8bc158bd-d8bf-46f2-bfb9-621e3e4a1176" />
+<img width="1267" height="663" alt="image" src="https://github.com/user-attachments/assets/7354ccf8-8aa2-4553-bccd-d0e5cbf3cdf3" />
+
+##### Tips for error analysis #####
+* Develop a habit of looking at traces
+* Carry out error analysis to figure out what component performedc poorly, leading to a poor final output
+* Use error analysis output to decide where to focus efforts
+
   
+
 
