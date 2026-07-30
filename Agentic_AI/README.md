@@ -170,4 +170,8 @@ Function to call
 <img width="890" height="466" alt="image" src="https://github.com/user-attachments/assets/f2b00210-5383-4098-a181-7920fa272477" />
 
 ### Tool syntax
+<img width="900" height="426" alt="image" src="https://github.com/user-attachments/assets/5f0ca33d-0f53-4027-b218-49b7965a7d6b" />
 
+<img width="889" height="432" alt="image" src="https://github.com/user-attachments/assets/822eb0d9-03ea-45fe-bc88-fb0641724987" />
+
+<img width="900" height="444" alt="image" src="https://github.com/user-attachments/assets/2f2733ca-0e3f-4e49-a3b8-a7a78ce1e17d" />
