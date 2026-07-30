@@ -195,3 +195,22 @@ instead of building separate integration for each tool, one MCP server is create
 
 <img width="830" height="453" alt="image" src="https://github.com/user-attachments/assets/81dbf442-a835-4ad3-94e5-55b713b683f2" />
 
+## Practical Tips for Building Agentic AI
+
+### Evaluations (evals)
+<img width="911" height="487" alt="image" src="https://github.com/user-attachments/assets/9429076f-f620-4d62-bb46-73ad152a3570" />
+<img width="830" height="417" alt="image" src="https://github.com/user-attachments/assets/08845f93-6360-4adb-b066-5f2d37ec5c35" />
+
+<img width="804" height="484" alt="image" src="https://github.com/user-attachments/assets/123bb912-29fa-41de-a057-58a19bc1c93b" />
+<img width="831" height="426" alt="image" src="https://github.com/user-attachments/assets/767ddba4-7b88-401d-a61a-56726480b805" />
+<img width="888" height="483" alt="image" src="https://github.com/user-attachments/assets/49111421-44b7-44eb-9c1f-e7692ab2a191" />
+<img width="889" height="449" alt="image" src="https://github.com/user-attachments/assets/0bc7d3da-f835-49a8-a57b-0ab4a2d73a4c" />
+<img width="926" height="489" alt="image" src="https://github.com/user-attachments/assets/0b1a277e-1aff-49fa-903c-67cda44f1e11" />
+
+#### Tips for designing end-to-end evals ####
+* Quick and dirty is ok to start
+* As you find places where your evals fail to capture human judgement as to what system is better, use that as an opportunity to improve the metric
+* Look for places where performance is worse than humans
+
+  
+
