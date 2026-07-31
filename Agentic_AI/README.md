@@ -249,9 +249,101 @@ Focus on the area where the number of errors is higher than the other component 
 * More efficient for focused team to optimise
 *   - work on smaller, more targered problems faster
  
-
-  
+### How to address problems you identify ###
+**Improving non-LLM component performance**
+e.g. web search, text retrieval for RAG, code execution, trained ML model (for speech recognition, people detection, etc.)
+* Tune hyperparameters of component (web search: number of results, date range  RAG: Change similarity threshold, chunk size  ML models: Detection threshold)
+  - web search: number of results, date range
+  - RAG: change similarity threshold, chunk size
+  - ML models: detectioin threshold
+* Replace the component (try a different web search engine, RAG provider etc.)
+  - try a different web search engine ie. tavily,
+  - RAG provider
+**Improving LLM component performance**
+* Improve your prompts
+  - Add more explicit instructions
+  - Add one or more concrete example to the prompt (few-shot prompting)
+* Try a new model
+  - try multiple LLMs and use evals to pick the best
+* Split up the step
+  - decompose the tasks into smaller steps
+* Fine-tune a model
+  - fine tune on your internal data to improve performance
 
 ### How to address problems you identify ### 
+
+**Need to have intuition as to the best LLM models**
+
+Instruction following
+- Summary of customer call:
+  On July 14, 2023 , Jessica Alvarez (SSN: 555-44-3333) of 1024 Maple Ridge Lane, Boulder, CO 80301, submitted a support ticket ...
+  * Prompt - Identify all cases of personally identifiable information (PII) in the text below.  Then return a list of the identified PII classified by type, and then redact all the identified PII with "*****".  Separate the list and the redacted text with "REDACTED:". {text}
+
+larger frontier model are better at following instruction
+* Play with models often
+  - having a personal set of evals might be helpful
+  - read other **people's prompts** for ideas of how to best use models
+* Use different models in your agentic workflows
+  - which models work for which types of tasks?
+  - aisuite makes it easy to quickly swap out models
+ 
+
+### Latency, cost optimization ###
+Focus first on getting high quality outputs, then latency and cost optimization
+
+bench mark the time across entire tasks
+<img width="1233" height="661" alt="image" src="https://github.com/user-attachments/assets/c20fbb2f-120e-42f2-bdee-40da7878a3c4" />
+
+#### Costing your workflow ####
+* LLM steps (pay per token)
+* Any API-calling tools (pay per API call)
+* Compute steps (based on server capacity/cost)
+* 
+<img width="1263" height="670" alt="image" src="https://github.com/user-attachments/assets/739591c6-6b8e-496e-83bf-8ac17d8d5d60" />
+
+### Development process summary ###
+
+Build,   Analyze
+
+<img width="938" height="468" alt="image" src="https://github.com/user-attachments/assets/41ee5bfd-0d57-4306-a6b3-c48adf9f25ce" />
+
+```mermaid
+flowchart LR
+    subgraph Build ["Build"]
+        direction TB
+        B1["Build end-to-end system"]
+        B2["Improve individual component"]
+    end
+
+    subgraph Analyze ["Analyze"]
+        direction TB
+        A1["Examine outputs; traces"]
+        A2["Build evals; compute metrics"]
+        A3["Error analysis"]
+        A4["Component-level evals"]
+    end
+
+    %% Bidirectional interaction between phases
+    Build <--> Analyze
+
+    %% Styling to match slide aesthetic
+    style Build fill:#b2c8ed,stroke:#7b9ecc,stroke-width:1px,color:#000
+    style Analyze fill:#b2c8ed,stroke:#7b9ecc,stroke-width:1px,color:#000
+    style B1 fill:#ffffff,stroke:#cccccc,color:#000
+    style B2 fill:#ffffff,stroke:#cccccc,color:#000
+    style A1 fill:#ffffff,stroke:#cccccc,color:#000
+    style A2 fill:#ffffff,stroke:#cccccc,color:#000
+    style A3 fill:#ffffff,stroke:#cccccc,color:#000
+    style A4 fill:#ffffff,stroke:#cccccc,color:#000
+
+## Module5: Patterns for Highly Autonomous Agents ##
+
+### Planning workflows ###
+
+
+
+
+
+
 
 
