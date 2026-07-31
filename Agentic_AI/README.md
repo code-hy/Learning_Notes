@@ -357,9 +357,15 @@ _**Allows downstream workflows to easily parse the plan and execute it**_
 
 ### Planning with code execution ###
 
+<img width="946" height="479" alt="image" src="https://github.com/user-attachments/assets/4f33000b-2748-4aa4-bd94-dbd0ded5dd04" />
 
+creating so many tools make it brittle and inefficient, best way is to allow it to generate code that can be executed
 
+<img width="899" height="507" alt="image" src="https://github.com/user-attachments/assets/5ecea583-510a-4eb6-8131-00c6034db5fe" />
 
+<img width="922" height="465" alt="image" src="https://github.com/user-attachments/assets/2f494a57-c09b-4604-9554-99d84b8c8da4" />
+
+<img width="915" height="482" alt="image" src="https://github.com/user-attachments/assets/58d959c6-a30a-4761-85ff-650e4ce441dd" />
 
 
 
