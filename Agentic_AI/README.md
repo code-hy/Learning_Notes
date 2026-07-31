@@ -195,7 +195,7 @@ instead of building separate integration for each tool, one MCP server is create
 
 <img width="830" height="453" alt="image" src="https://github.com/user-attachments/assets/81dbf442-a835-4ad3-94e5-55b713b683f2" />
 
-## Practical Tips for Building Agentic AI
+## Practical Tips for Building Agentic AI (Module 4)
 
 ### Evaluations (evals)
 <img width="911" height="487" alt="image" src="https://github.com/user-attachments/assets/9429076f-f620-4d62-bb46-73ad152a3570" />
@@ -252,6 +252,6 @@ Focus on the area where the number of errors is higher than the other component 
 
   
 
-* 
+### How to address problems you identify ### 
 
 
