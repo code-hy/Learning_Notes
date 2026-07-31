@@ -335,10 +335,28 @@ flowchart LR
     style A2 fill:#ffffff,stroke:#cccccc,color:#000
     style A3 fill:#ffffff,stroke:#cccccc,color:#000
     style A4 fill:#ffffff,stroke:#cccccc,color:#000
-
+```
 ## Module5: Patterns for Highly Autonomous Agents ##
 
 ### Planning workflows ###
+<img width="906" height="455" alt="image" src="https://github.com/user-attachments/assets/44e0c649-7453-49ea-b51e-88b0ba2bd52b" />
+
+<img width="943" height="473" alt="image" src="https://github.com/user-attachments/assets/4c851693-6818-41e8-a4b3-b60c8c8cd94f" />
+<img width="940" height="502" alt="image" src="https://github.com/user-attachments/assets/377a57c8-792f-40a6-b2d3-eb2b5c19c6fd" />
+
+#### Planning example: Email assistant ####
+<img width="941" height="495" alt="image" src="https://github.com/user-attachments/assets/b8e6139d-b36e-4536-b26c-ce2248a8dbfb" />
+
+### Creating and executing LLM plans ###
+<img width="943" height="484" alt="image" src="https://github.com/user-attachments/assets/7187f364-ff38-4f2b-87fc-1841f4e8a681" />
+
+**Formatting plan as JSON or XML**
+<img width="947" height="469" alt="image" src="https://github.com/user-attachments/assets/eab1868a-fee4-49e0-bce7-27b9ec3cf514" />
+
+_**Allows downstream workflows to easily parse the plan and execute it**_
+
+### Planning with code execution ###
+
 
 
 
