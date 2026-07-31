@@ -227,5 +227,31 @@ instead of building separate integration for each tool, one MCP server is create
 * Use error analysis output to decide where to focus efforts
 
   
+<img width="1295" height="601" alt="image" src="https://github.com/user-attachments/assets/e105d48e-5a52-4b99-bac6-12e55b74e420" />
+_to carry out error analysis, focus on examples where performance is subpar_
+
+##### Counting up the errors #####
+* Select 10 - 100 invoices for which the agentic workflow extracted the wrong due date.
+<img width="971" height="395" alt="image" src="https://github.com/user-attachments/assets/ce0fd490-4ed6-4515-923f-404319b483f9" />
+
+<img width="1239" height="516" alt="image" src="https://github.com/user-attachments/assets/93c2a895-5203-420f-9f36-36b75d537b7e" />
+
+Focus on the area where the number of errors is higher than the other component area
+
+##### Component-level evaluations #####
+
+<img width="1242" height="629" alt="image" src="https://github.com/user-attachments/assets/ae0fdcf7-2db2-4b5f-89eb-adf64dabf67e" />
+* Track as you vary hyperparameters: eg search engine, number of results, dates
+
+**Benefits of component-level evaluations**
+* Can provide clearer signal for specific errors
+*   - avoid the noise in end-to-end system
+* More efficient for focused team to optimise
+*   - work on smaller, more targered problems faster
+ 
+
+  
+
+* 
 
 
