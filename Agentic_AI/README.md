@@ -374,6 +374,7 @@ creating so many tools make it brittle and inefficient, best way is to allow it 
 #### Some tasks require more than 1 person ! ####
 
 | Task | Team |
+|---|---|
 | Create marketing assets | Researcher |
 |                         | Graphic Designer |
 |                         | Writer |
@@ -385,5 +386,42 @@ creating so many tools make it brittle and inefficient, best way is to allow it 
 |                        | Paralegal |
 |                        | Investigator |
 
+##### Researcher
+Tasks
+* Analyse market trends
+* Research competitors
 
+Tools
+* Web search
+
+##### Graphic Designer 
+Tasks
+* Create data visualisations
+* Create artwork
+
+Tools
+* Image generation, manipulation
+* Code execution for chart generation
+
+##### Writer
+Tasks
+* Transform research into report text and marketing copy
+Tools
+* (None)
+
+```mermaid
+flowchart LR
+   subgraph Researcher ['Researcher']
+       direction TB
+   end
+   subgraph GraphicDesigner ['Graphic Designer']
+       direction TB
+   end
+   subgraph Writer['Writer']
+       direction TB
+   end
+   Researcher --> GraphicDesigner --> Writer
+
+```
+<img width="925" height="488" alt="image" src="https://github.com/user-attachments/assets/d6a9ac72-73e3-4b5d-adcf-2cf090e9992f" />
 
