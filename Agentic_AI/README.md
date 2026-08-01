@@ -336,6 +336,7 @@ flowchart LR
     style A3 fill:#ffffff,stroke:#cccccc,color:#000
     style A4 fill:#ffffff,stroke:#cccccc,color:#000
 ```
+
 ## Module5: Patterns for Highly Autonomous Agents ##
 
 ### Planning workflows ###
@@ -368,6 +369,21 @@ creating so many tools make it brittle and inefficient, best way is to allow it 
 <img width="915" height="482" alt="image" src="https://github.com/user-attachments/assets/58d959c6-a30a-4761-85ff-650e4ce441dd" />
 
 
+### Multi-agentic workflows ###
+
+#### Some tasks require more than 1 person ! ####
+
+| Task | Team |
+| Create marketing assets | Researcher |
+|                         | Graphic Designer |
+|                         | Writer |
+| Writing a research article | Researcher |
+|                            | Statistician |
+|                            | Lead writer |
+|                            | Editor |
+| Preparing a legal case | Associate |
+|                        | Paralegal |
+|                        | Investigator |
 
 
 
