@@ -428,4 +428,32 @@ flowchart LR
 <img width="918" height="489" alt="image" src="https://github.com/user-attachments/assets/ad3b18cf-ad53-4f72-a4f6-fb094e3aba10" />
 
 
+### Communication patterns for multi-agent systems
+
+#### Example: Marketing team with linear plan
+
+one agent pass on to another agent in a linear fashion
+<img width="924" height="480" alt="image" src="https://github.com/user-attachments/assets/aab485a6-a287-455b-883a-ad2dadcad8b7" />
+
+
+#### Example: Planning with multiple agents
+Manager communicates with team, and manager send report, etc. coordinates with others
+<img width="788" height="443" alt="image" src="https://github.com/user-attachments/assets/4f810b2e-730c-4f54-b8f9-004984bb3efa" />
+
+Deeper hierarchy
+<img width="899" height="427" alt="image" src="https://github.com/user-attachments/assets/f886d75b-6eb6-4f71-bc57-998e3b82149f" />
+
+### Agentic AI final conclusion
+
+**Summary**
+* Why Agentic AI
+* Reflection design pattern
+* Tool use(function calling)
+* Evals, error analysis
+* Planning, multi-agent systems
+
+  
+
+### Acknowledgements
+
 
