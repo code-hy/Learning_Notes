@@ -387,3 +387,5 @@ This method directly helps avoid several common problems:
 The most important lesson from the article is to replace uncertainty with staged contracts and runnable milestones. Start with a spec, prototype with mocks, define the contract, connect the system, then add persistence and deployment concerns only after the core app works.[cite:1]
 
 That makes AI-assisted full-stack development far more manageable for beginners because every prompt has a narrow purpose, every layer has a clear boundary, and every step ends with something concrete that can be tested.[cite:1]
+
+[cite:1] https://aishippingblog.com/p/build-and-ship-a-full-stack-app-with
